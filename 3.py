@@ -1,6 +1,9 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = int(input("Enter the number of elements: "))
+numbers = []
+for i in range(a):
+    b = int(input("Enter a number: "))
+    numbers.append(b)
+    
+seperator = lambda nums: {"even": [n for n in nums if n % 2 == 0], "odd": [n for n in nums if n % 2 != 0]}
 
-separate = lambda nums: {'even': [n for n in nums if n % 2 == 0],
-                         'odd': [n for n in nums if n % 2 != 0]}
-
-print(separate(numbers))
+print(seperator(numbers))
